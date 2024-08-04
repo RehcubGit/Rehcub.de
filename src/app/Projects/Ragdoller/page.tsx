@@ -94,6 +94,7 @@ export default function Ragdoller() {
           Discord
         </a>
       </p>
+      <a href="">Back</a>
     </div>
   );
 }
