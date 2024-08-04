@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Ragdoller() {
   return (
     <div>
@@ -94,6 +96,13 @@ export default function Ragdoller() {
           Discord
         </a>
       </p>
+      <Link
+        href="#"
+        className="text-sm font-medium hover:underline underline-offset-4"
+        prefetch={false}
+      >
+        Back
+      </Link>
     </div>
   );
 }
