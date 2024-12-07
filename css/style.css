@@ -1224,7 +1224,7 @@ ul.top_icon li a {
 }
 
 .header-top {
-    background: url(../images/banner2.jpg);
+    /* background: url(../images/banner2.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     padding-bottom: 50px;

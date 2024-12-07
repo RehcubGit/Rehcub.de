@@ -1,0 +1,583 @@
+.resource-img {
+    clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+}
+img,
+video {
+    height: auto;
+    max-width: 100%
+}
+
+.token {
+    border-radius: 50%;
+    bottom: 0;
+    height: 24px;
+    left: 0;
+    margin: auto;
+    padding: 6px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 24px;
+    align-items: center;
+    background: #fff;
+    border: 2px solid #666;
+    color: #666;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-image: initial;
+    background-color: rgb(24, 26, 27);
+    border-color: rgb(106, 99, 87);
+    color: rgb(168, 160, 149);
+}
+.token {
+    @media screen and (min-width: 768px) {
+        height: 36px;
+        padding-bottom: 8px;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-top: 8px;
+        width: 36px;
+    }
+}
+
+.hidden {
+    display: none;
+}.hex {
+    display: flex;
+    position: relative;
+}
+
+.hill {
+}
+
+.forest {
+}
+
+.mountain {
+}
+
+.field {
+}
+
+.pasture {
+}
+
+.desert {
+}
+
+.gold-hex:before {
+    height: 81px;
+    width: 89.1px;
+    background-color: gold
+}
+
+.sea-hex:before {
+    height: 81px;
+    width: 89.1px;
+    background-color: #00f
+}
+.generator-container {
+    align-items: center;
+    flex-basis: 66.666667%;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: .5rem;
+    justify-content: center;
+    margin-top: 1rem;
+    position: relative;
+}
+.hexagon-gallery {
+    display: grid;
+    grid-gap: 1px;
+    position: relative;
+}
+
+.hexagon-gallery-seafarers {
+    @media screen and (min-width: 768px) {
+        grid-auto-columns: 67.5px;
+        padding-right: 22.275px;
+    }
+}
+
+.hexagon-gallery-seafarers .hex {
+    height: 54px;
+    width: 59.4px;
+
+    @media screen and (min-width:768px) {
+        height: 81px;
+        width: 89.1px
+    }
+}
+
+.hexagon-gallery-seafarers .hex:before {
+    clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+    width: 100%;
+    content: "";
+    height: 100%;
+    position: absolute;
+}
+
+/* 
+.hexagon-gallery-seafarers .hex:first-child {
+    grid-column-start: 4;
+    grid-row: 1 / span 2;
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(2) {
+    grid-column-start: 3;
+    grid-row: 2 / span 2;
+}.hexagon-gallery-seafarers .hex:nth-child(3) {
+    grid-column-start: 5;
+    grid-row: 2 / span 2;
+}.hexagon-gallery-seafarers .hex:nth-child(4) {
+    grid-column-start: 2;
+    grid-row: 3 / span 2;
+} */
+.hexagon-gallery-dragons .hex:first-child,
+.hexagon-gallery-seafarers .hex:first-child {
+    grid-column-start: 4;
+    grid-row: 1/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(2),
+.hexagon-gallery-seafarers .hex:nth-child(2) {
+    grid-column-start: 3;
+    grid-row: 2/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(3),
+.hexagon-gallery-seafarers .hex:nth-child(3) {
+    grid-column-start: 5;
+    grid-row: 2/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(4),
+.hexagon-gallery-seafarers .hex:nth-child(4) {
+    grid-column-start: 2;
+    grid-row: 3/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(5),
+.hexagon-gallery-seafarers .hex:nth-child(5) {
+    grid-column-start: 4;
+    grid-row: 3/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(6),
+.hexagon-gallery-seafarers .hex:nth-child(6) {
+    grid-column-start: 6;
+    grid-row: 3/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(7),
+.hexagon-gallery-seafarers .hex:nth-child(7) {
+    grid-column-start: 1;
+    grid-row: 4/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(8),
+.hexagon-gallery-seafarers .hex:nth-child(8) {
+    grid-column-start: 3;
+    grid-row: 4/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(9),
+.hexagon-gallery-seafarers .hex:nth-child(9) {
+    grid-column-start: 5;
+    grid-row: 4/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(10),
+.hexagon-gallery-seafarers .hex:nth-child(10) {
+    grid-column-start: 7;
+    grid-row: 4/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(11),
+.hexagon-gallery-seafarers .hex:nth-child(11) {
+    grid-column-start: 2;
+    grid-row: 5/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(12),
+.hexagon-gallery-seafarers .hex:nth-child(12) {
+    grid-column-start: 4;
+    grid-row: 5/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(13),
+.hexagon-gallery-seafarers .hex:nth-child(13) {
+    grid-column-start: 6;
+    grid-row: 5/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(14),
+.hexagon-gallery-seafarers .hex:nth-child(14) {
+    grid-column-start: 1;
+    grid-row: 6/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(15),
+.hexagon-gallery-seafarers .hex:nth-child(15) {
+    grid-column-start: 3;
+    grid-row: 6/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(16),
+.hexagon-gallery-seafarers .hex:nth-child(16) {
+    grid-column-start: 5;
+    grid-row: 6/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(17),
+.hexagon-gallery-seafarers .hex:nth-child(17) {
+    grid-column-start: 7;
+    grid-row: 6/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(18),
+.hexagon-gallery-seafarers .hex:nth-child(18) {
+    grid-column-start: 2;
+    grid-row: 7/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(19),
+.hexagon-gallery-seafarers .hex:nth-child(19) {
+    grid-column-start: 4;
+    grid-row: 7/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(20),
+.hexagon-gallery-seafarers .hex:nth-child(20) {
+    grid-column-start: 6;
+    grid-row: 7/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(21),
+.hexagon-gallery-seafarers .hex:nth-child(21) {
+    grid-column-start: 1;
+    grid-row: 8/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(22),
+.hexagon-gallery-seafarers .hex:nth-child(22) {
+    grid-column-start: 3;
+    grid-row: 8/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(23),
+.hexagon-gallery-seafarers .hex:nth-child(23) {
+    grid-column-start: 5;
+    grid-row: 8/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(24),
+.hexagon-gallery-seafarers .hex:nth-child(24) {
+    grid-column-start: 7;
+    grid-row: 8/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(25),
+.hexagon-gallery-seafarers .hex:nth-child(25) {
+    grid-column-start: 2;
+    grid-row: 9/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(26),
+.hexagon-gallery-seafarers .hex:nth-child(26) {
+    grid-column-start: 4;
+    grid-row: 9/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(27),
+.hexagon-gallery-seafarers .hex:nth-child(27) {
+    grid-column-start: 6;
+    grid-row: 9/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(28),
+.hexagon-gallery-seafarers .hex:nth-child(28) {
+    grid-column-start: 1;
+    grid-row: 10/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(29),
+.hexagon-gallery-seafarers .hex:nth-child(29) {
+    grid-column-start: 3;
+    grid-row: 10/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(30),
+.hexagon-gallery-seafarers .hex:nth-child(30) {
+    grid-column-start: 5;
+    grid-row: 10/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(31),
+.hexagon-gallery-seafarers .hex:nth-child(31) {
+    grid-column-start: 7;
+    grid-row: 10/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(32),
+.hexagon-gallery-seafarers .hex:nth-child(32) {
+    grid-column-start: 2;
+    grid-row: 11/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(33),
+.hexagon-gallery-seafarers .hex:nth-child(33) {
+    grid-column-start: 4;
+    grid-row: 11/span 2
+}
+
+.hexagon-gallery-dragons .hex:nth-child(34),
+.hexagon-gallery-seafarers .hex:nth-child(34) {
+    grid-column-start: 6;
+    grid-row: 11/span 2
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(35) {
+    grid-column-start: 3;
+    grid-row: 12/span 2
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(35) {
+    grid-column-start: 1;
+    grid-row: 12/span 2
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(36) {
+    grid-column-start: 5;
+    grid-row: 12/span 2
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(36) {
+    grid-column-start: 3;
+    grid-row: 12/span 2
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(37) {
+    grid-column-start: 4;
+    grid-row: 13/span 2
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(37) {
+    grid-column-start: 5;
+    grid-row: 12/span 2
+}
+
+.hexagon-gallery-dragons-13 .hex:nth-child(n+38),
+.hexagon-gallery-seafarers-13 .hex:nth-child(n+38) {
+    display: none
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(38) {
+    grid-column-start: 7;
+    grid-row: 12/span 2
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(39) {
+    grid-column-start: 2;
+    grid-row: 13/span 2
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(40) {
+    grid-column-start: 4;
+    grid-row: 13/span 2
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(41) {
+    grid-column-start: 6;
+    grid-row: 13/span 2
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(42) {
+    grid-column-start: 3;
+    grid-row: 14/span 2
+}
+
+.hexagon-gallery-seafarers-21 .hex:nth-child(42) {
+    grid-column-start: 1;
+    grid-row: 14/span 2
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(43) {
+    grid-column-start: 5;
+    grid-row: 14/span 2
+}
+
+.hexagon-gallery-seafarers-21 .hex:nth-child(43) {
+    grid-column-start: 3;
+    grid-row: 14/span 2
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(44) {
+    grid-column-start: 4;
+    grid-row: 15/span 2
+}
+
+.hexagon-gallery-seafarers-21 .hex:nth-child(44) {
+    grid-column-start: 5;
+    grid-row: 14/span 2
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(n+45) {
+    display: none
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(45) {
+    grid-column-start: 7;
+    grid-row: 14/span 2
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(46) {
+    grid-column-start: 2;
+    grid-row: 15/span 2
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(47) {
+    grid-column-start: 4;
+    grid-row: 15/span 2
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(48) {
+    grid-column-start: 6;
+    grid-row: 15/span 2
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(49) {
+    grid-column-start: 3;
+    grid-row: 16/span 2
+}
+
+.hexagon-gallery-seafarers-21 .hex:nth-child(49) {
+    grid-column-start: 1;
+    grid-row: 16/span 2
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(50) {
+    grid-column-start: 5;
+    grid-row: 16/span 2
+}
+
+.hexagon-gallery-seafarers-21 .hex:nth-child(50) {
+    grid-column-start: 3;
+    grid-row: 16/span 2
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(51) {
+    grid-column-start: 4;
+    grid-row: 17/span 2
+}
+
+.hexagon-gallery-seafarers-21 .hex:nth-child(51) {
+    grid-column-start: 5;
+    grid-row: 16/span 2
+}
+
+.hexagon-gallery-seafarers-17 .hex:nth-child(n+52) {
+    display: none
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(52) {
+    grid-column-start: 7;
+    grid-row: 16/span 2
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(53) {
+    grid-column-start: 2;
+    grid-row: 17/span 2
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(54) {
+    grid-column-start: 4;
+    grid-row: 17/span 2
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(55) {
+    grid-column-start: 6;
+    grid-row: 17/span 2
+}
+
+.hexagon-gallery-seafarers .hex:nth-child(56) {
+    grid-column-start: 3;
+    grid-row: 18/span 2
+}
+
+.hexagon-gallery-seafarers-21 .hex:nth-child(56) {
+    grid-column-start: 1;
+    grid-row: 18/span 2
+}
+
+.hexagon-gallery-dragons-19 .hex:nth-child(57),
+.hexagon-gallery-seafarers-19 .hex:nth-child(57) {
+    grid-column-start: 5;
+    grid-row: 18/span 2
+}
+
+.hexagon-gallery-dragons-21 .hex:nth-child(57),
+.hexagon-gallery-seafarers-21 .hex:nth-child(57) {
+    grid-column-start: 3;
+    grid-row: 18/span 2
+}
+
+.hexagon-gallery-dragons-19 .hex:nth-child(58),
+.hexagon-gallery-seafarers-19 .hex:nth-child(58) {
+    grid-column-start: 4;
+    grid-row: 19/span 2
+}
+
+.hexagon-gallery-dragons-21 .hex:nth-child(58),
+.hexagon-gallery-seafarers-21 .hex:nth-child(58) {
+    grid-column-start: 5;
+    grid-row: 18/span 2
+}
+
+.hexagon-gallery-dragons-19 .hex:nth-child(n+59),
+.hexagon-gallery-seafarers-19 .hex:nth-child(n+59) {
+    display: none
+}
+
+.hexagon-gallery-dragons-21 .hex:nth-child(59),
+.hexagon-gallery-seafarers-21 .hex:nth-child(59) {
+    grid-column-start: 7;
+    grid-row: 18/span 2
+}
+
+.hexagon-gallery-dragons-21 .hex:nth-child(60),
+.hexagon-gallery-seafarers-21 .hex:nth-child(60) {
+    grid-column-start: 2;
+    grid-row: 19/span 2
+}
+
+.hexagon-gallery-dragons-21 .hex:nth-child(61),
+.hexagon-gallery-seafarers-21 .hex:nth-child(61) {
+    grid-column-start: 4;
+    grid-row: 19/span 2
+}
+
+.hexagon-gallery-dragons-21 .hex:nth-child(62),
+.hexagon-gallery-seafarers-21 .hex:nth-child(62) {
+    grid-column-start: 6;
+    grid-row: 19/span 2
+}
+
+.hexagon-gallery-dragons-21 .hex:nth-child(63),
+.hexagon-gallery-seafarers-21 .hex:nth-child(63) {
+    grid-column-start: 3;
+    grid-row: 20/span 2
+}
+
+.hexagon-gallery-dragons-21 .hex:nth-child(64),
+.hexagon-gallery-seafarers-21 .hex:nth-child(64) {
+    grid-column-start: 5;
+    grid-row: 20/span 2
+}
+
+.hexagon-gallery-dragons-21 .hex:nth-child(65),
+.hexagon-gallery-seafarers-21 .hex:nth-child(65) {
+    grid-column-start: 4;
+    grid-row: 21/span 2
+}
